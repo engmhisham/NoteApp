@@ -1,0 +1,13 @@
+.modal-container {
+  background: rgba(0, 0, 2, 0.4);
+  z-index: 1022;
+  /* background: linear-gradient(
+      -45deg,
+      rgba(200, 80, 192, 0.5),
+      rgba(65, 89, 208, 0.5)
+    ); */
+}
+
+.modal-updateNote {
+  max-width: 500px;
+}

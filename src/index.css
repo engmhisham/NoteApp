@@ -1,13 +1,171 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+:root {
+  --color-main: #4158d0;
+  --color-second: #c850c0;
+  --bg-liner-gradient: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+.bg-liner-gradient {
+  background: var(--bg-liner-gradient);
+}
+.bg-main {
+  background: var(--color-main);
+}
+.text-main {
+  color: var(--color-main);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::selection {
+  background: #4158d0;
+  color: #fff;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f2f2f2;
+}
+
+a {
+  color: #4158d0;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.font-sm {
+  font-size: 14px;
+}
+.w-fit-content{
+  width: fit-content;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* forms login && register */
+.wrapper {
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+.title-main {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.wrapper form {
+  padding: 10px 30px 50px 30px;
+}
+.wrapper form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input,
+form .field button[type="submit"] {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid {
+  border-color: #4158d0;
+}
+.wrapper form .field label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label {
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form .field button[type="submit"] {
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transition: all 0.3s ease;
+}
+form .field button[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+form .signup-link {
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-control:focus,
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus,
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+  box-shadow: none;
+}
+
+/*  btn style */
+.btn-primary {
+  --bs-btn-bg: var(--color-main);
+  --bs-btn-border-color: var(--color-main);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-color: var(--color-main);
+  --bs-btn-hover-border-color: var(--color-main);
+  --bs-btn-active-bg: var(--color-main);
+  --bs-btn-active-border-color: var(--color-main);
+  --bs-btn-disabled-bg: #4159d099;
+  --bs-btn-disabled-border-color: #4159d099;
 }
